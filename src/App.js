@@ -6,7 +6,7 @@ const api = {
 
 
 function App() {
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState('lagos')
   const [weather, setWeather] = useState({})
 
   const search = evt => { //evt here stands for event :: function we ll use to actually get our weather info
