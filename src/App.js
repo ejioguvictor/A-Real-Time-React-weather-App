@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useEffect, useState } from 'react'
 const api = {
   key: "733af6e392f5341bc46439fd28c50ad2",
   base: "https://api.openweathermap.org/data/2.5/"
@@ -20,6 +20,10 @@ function App() {
         })
     }
   }
+  
+useEffect(() => {
+  search()
+}, []);
 
   return (
     <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
@@ -32,7 +36,6 @@ function App() {
           />
            <input type="hidden" 
             value={query}
-            onLoad={search}
           />
         </div>
         {(typeof weather.main != "undefined") ? (
