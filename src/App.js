@@ -30,6 +30,10 @@ function App() {
             value={query}
             onKeyPress={search}
           />
+           <input type="hidden" 
+            value={query}
+            onLoad={search}
+          />
         </div>
         {(typeof weather.main != "undefined") ? (
           <div>
