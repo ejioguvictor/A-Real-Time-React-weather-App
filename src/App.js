@@ -26,7 +26,7 @@ function App() {
       <main>
         <h1>Weather-App</h1>
         <div className="search-box">
-          <input type="text" className="search-bar" placeholder="Search..." onChange={e => setQuery(e.target.value)}
+          <input type="text" className="search-bar" placeholder="Enter a location here..." onChange={e => setQuery(e.target.value)}
             value={query}
             onKeyPress={search}
           />
